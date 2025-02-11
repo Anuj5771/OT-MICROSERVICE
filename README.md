@@ -133,7 +133,12 @@ PostgreSQL is an open-source, object-relational database system that uses SQL. I
 
 |   Github | url         |
 | :-------- | :--------------------------------- |
-| `anuj169` | |
+| `anuj169` | |https://github.com/Anuj5771/
 
+| Resource | Description | Link |
+|----------|------------|------|
+| PostgreSQL Official Documentation |  | |
+| PostgreSQL Wiki |  |  |
+| PostgreSQL GitHub Repository | |  |
 
 
