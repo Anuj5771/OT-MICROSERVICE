@@ -26,7 +26,35 @@ PostgreSQL is an open-source, object-relational database system that uses SQL. I
 | `Open-source`   | Free and has a large community. |
 | `Versatile`| Can be used for various applications.   |
 | `Feature-rich` |Offers advanced data types, full-text search, and more.
+
+# PostgreSQL Installation Requirements
+
+
+| **Requirement**          | **Details**                        |
+|--------------------------|------------------------------------|
+| **OS**                   | Ubuntu 22.04 or 24.04              |
+| **RAM**                  | 4 GB minimum                       |
+| **Disk Space**           | 10 GB or more                     |
+| **Processor**            | Intel Xeon or equivalent           |
+| **Instance Type**        | t2.medium (or equivalent)          |
+| **Network**              | Port 5432 open for PostgreSQL      |
+| **SSH**                  | Port 22 for remote access         |
+
+
+# PostgreSQL Dependencies on Ubuntu
+
+| **Category**                   | **Package(s)**                                                                 |
+|---------------------------------|-------------------------------------------------------------------------------|
+| **Core PostgreSQL Packages**    | `postgresql`, `postgresql-contrib`                                             |
+| **Development Libraries**       | `postgresql-server-dev-all`, `build-essential`, `libssl-dev`, `libreadline-dev`, `zlib1g-dev`, `libicu-dev`, `libxml2-dev` |
+| **Optional Libraries**          | `libbz2-dev`, `python3`                                                       |
+| **PostgreSQL Extensions**       | `postgis` (for GIS), `pg_partman` (for partitioning)                          |
+| **GUI Tools**                   | `pgadmin4` (for GUI management of PostgreSQL)                                  |
+| **Compression Tools**           | `bzip2`, `xz-utils`, `lz4`                                                    |
+
+
 ## PostgreSQL Architecture
+
 
 ![image](https://github.com/user-attachments/assets/f6e6f42b-a618-4d45-bc95-1132bd4c8f86)
 
@@ -127,18 +155,24 @@ PostgreSQL is an open-source, object-relational database system that uses SQL. I
 
 
 ## Contacts
-|   Name | Email Address           |
-| :-------- | :--------------------------------- |
-| `Anuj yadav` |anuj.yadav@mygurukulam.co |
 
-|   Github | url         |
-| :-------- | :--------------------------------- |
-| `anuj169` | |https://github.com/Anuj5771/
+| **Name**      | **Email Address**               |
+|---------------|----------------------------------|
+| Anuj Yadav    | anuj.yadav@mygurukulam.co        |
 
-| Resource | Description | Link |
-|----------|------------|------|
-| PostgreSQL Official Documentation |  | |
-| PostgreSQL Wiki |  |  |
-| PostgreSQL GitHub Repository | |  |
+## Github
+
+| **Username** | **URL**                        |
+|--------------|---------------------------------|
+| anuj169      | [https://github.com/Anuj5771/](https://github.com/Anuj5771/) |
+
+
+## Resources
+
+| **Resource**                      | **Description**                               | **Link**                                |
+|------------------------------------|-----------------------------------------------|-----------------------------------------|
+| PostgreSQL Official Documentation  | Official documentation for PostgreSQL         | [PostgreSQL Docs](https://www.postgresql.org/docs/) |
+| PostgreSQL Wiki                    | Community-driven PostgreSQL Wiki              | [PostgreSQL Wiki](https://wiki.postgresql.org/) |
+| PostgreSQL GitHub Repository       | The official PostgreSQL GitHub repository     | [PostgreSQL GitHub](https://github.com/postgres/postgres) |
 
 
