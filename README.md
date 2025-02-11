@@ -51,7 +51,6 @@ PostgreSQL is an open-source, object-relational database system that uses SQL. I
 | `Indexes` | Data structures that improve query performance by speeding up data retrieval.|
  `Constraints` |Rules that enforce data integrity by restricting the type or format of data allowed in a table.|
 
-## User & Role Management
 
 ## Creating and Managing a PostgreSQL Database
 | Rule   | Description                     |
@@ -82,61 +81,51 @@ PostgreSQL is an open-source, object-relational database system that uses SQL. I
 | **File System Level Backup (Physical Backup)** | A physical backup involves copying the actual data files (e.g., database files, logs, and configuration files) directly from the file system. This type of backup captures the entire database in its current state and is more efficient for large databases, as it includes everything needed to restore the database exactly as it was. It's ideal for full system recovery and can be faster to restore compared to logical backups. |
 
 
-## Extensions & Plugins
+# Extensions & Plugins
 
-Extensions and plugins are additional tools that enhance the functionality of the system or platform. They help extend the base capabilities by integrating new features or services.
-
-### Key Points:
-- **What are Extensions & Plugins?**
-  - Add-ons that increase the functionality of an application.
-  - Typically integrate third-party services.
-  
-- **Common Use Cases**
-  - Enhancing website functionality.
-  - Integrating with external APIs and services.
-
-## Best Practices & Common Issues
-
-### Best Practices:
-- **Keep software updated**: Ensure that all extensions and plugins are up-to-date to avoid security vulnerabilities.
-- **Choose reliable sources**: Only use extensions and plugins from trusted developers or marketplaces to avoid introducing malware.
-- **Test for compatibility**: Regularly check that extensions do not conflict with each other or your core system.
-
-### Common Issues:
-- **Conflicts between extensions**: Sometimes, two or more extensions/plugins can conflict, causing instability.
-- **Performance problems**: Certain plugins might slow down your system if they are not optimized.
-- **Security risks**: Unmaintained plugins can introduce vulnerabilities.
-
-## Real-World Use Cases
-
-Extensions and plugins are used widely in different domains:
-
-1. **E-commerce Platforms**: 
-   - Payment gateway plugins.
-   - Inventory management integrations.
-   
-2. **Web Browsers**:
-   - Ad-blocking extensions.
-   - Productivity tools like password managers.
-
-3. **CMS (Content Management Systems)**:
-   - SEO plugins.
-   - Social media integration.
-
-## High Availability
-
-To ensure high availability when using extensions and plugins:
-- **Use load balancing**: Distribute traffic across multiple servers to avoid downtime.
-- **Monitor and alert**: Regularly check for issues in the system and have alerts set up for potential failures.
-- **Redundancy**: Keep backup servers and services to ensure seamless service even during failures.
-
-## Conclusion
-
-Extensions and plugins are essential for extending the functionality of applications, but they need to be managed properly to avoid performance issues, security risks, or conflicts. Following best practices and ensuring high availability are key factors in successful implementation.
+| **Section**                   | **Details**                                                                                                                                 |
+|-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| **What are Extensions & Plugins?** | Add-ons that increase the functionality of an application. Typically integrate third-party services.                                         |
+| **Common Use Cases**           | - Enhancing website functionality.<br>- Integrating with external APIs and services.                                                      |
 
 ---
 
-## Contacts
+# Best Practices & Common Issues
+
+| **Category**            | **Details**                                                                                                                |
+|-------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| **Best Practices**       | - **Keep software updated**: Ensure that all extensions and plugins are up-to-date to avoid security vulnerabilities.<br>- **Choose reliable sources**: Only use extensions and plugins from trusted developers or marketplaces to avoid introducing malware.<br>- **Test for compatibility**: Regularly check that extensions do not conflict with each other or your core system. |
+| **Common Issues**        | - **Conflicts between extensions**: Two or more extensions/plugins can conflict, causing instability.<br>- **Performance problems**: Certain plugins might slow down your system if not optimized.<br>- **Security risks**: Unmaintained plugins can introduce vulnerabilities. |
+
+---
+
+# Real-World Use Cases
+
+| **Domain**               | **Use Cases**                                                                                                          |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------|
+| **E-commerce Platforms** | - Payment gateway plugins.<br>- Inventory management integrations.                                                    |
+| **Web Browsers**         | - Ad-blocking extensions.<br>- Productivity tools like password managers.                                              |
+| **CMS (Content Management Systems)** | - SEO plugins.<br>- Social media integrations.                                                                 |
+
+---
+
+# High Availability
+
+| **Strategy**              | **Details**                                                                                                                |
+|---------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| **Use Load Balancing**    | Distribute traffic across multiple servers to avoid downtime.                                                              |
+| **Monitor and Alert**     | Regularly check for issues and set up alerts for potential failures.                                                       |
+| **Redundancy**            | Keep backup servers and services to ensure seamless service even during failures.                                           |
+
+---
+
+# Conclusion
+
+| **Summary**                                                                                                      |
+|-------------------------------------------------------------------------------------------------------------------|
+| Extensions and plugins are essential for extending the functionality of applications. However, they must be managed properly to avoid performance issues, security risks, or conflicts. Following best practices and ensuring high availability are key to successful implementation.                                                                 |
+
+
 ## Contacts
 |   Name | Email Address           |
 | :-------- | :--------------------------------- |
