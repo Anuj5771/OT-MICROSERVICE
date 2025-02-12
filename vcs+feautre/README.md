@@ -91,6 +91,32 @@ git branch -D <branch-name>
 git push origin --delete <branch-name>
 
 ```
+### GitHub Security Features
+
+| **Feature**                          | **Description**                                                           | **Commands/Setup**                                           |
+|--------------------------------------|---------------------------------------------------------------------------|-------------------------------------------------------------|
+| **Two-Factor Authentication (2FA)**  | Adds an extra layer of security by requiring a second form of verification. | Enable 2FA in GitHub settings under Security & Analysis.    |
+| **Secret Scanning**                  | Detects sensitive information (like API keys or passwords) in your code.   | GitHub automatically scans public repositories for secrets.  |
+| **Dependabot**                       | Automates security updates for your project dependencies.                  | Enable Dependabot in repository settings.                   |
+
+### Collaborative Development
+
+| **Feature**                          | **Description**                                                           | **Commands/Setup**                                           |
+|--------------------------------------|---------------------------------------------------------------------------|-------------------------------------------------------------|
+| **Forking**                          | Create a copy of someone else’s repository to make changes and contribute back. | `git clone <repo-url>` (after forking).                     |
+| **Cloning**                          | Download a repository to your local machine to work offline.              | `git clone <repo-url>`                                        |
+| **Branch Protection**                | Protects branches by requiring specific checks before merging.           | Set up branch protection in repository settings.            |
+| **Code Reviews**                     | Process for reviewing code in pull requests before merging.               | Use the "Review" button in a pull request.                   |
+
+
+### Automation with GitHub Actions
+
+| **Feature**                          | **Description**                                                           | **Commands/Setup**                                           |
+|--------------------------------------|---------------------------------------------------------------------------|-------------------------------------------------------------|
+| **Workflow Triggers**                | Automates tasks based on specific events (e.g., push, pull request).      | Define triggers in `.github/workflows/` YAML files.         |
+| **Custom Actions**                   | Create or use pre-built actions to automate workflows.                    | Define actions in workflow YAML or install from GitHub Marketplace. |
+| **Example Workflow**                 | Automate testing or deployment using GitHub Actions.                      | See example below for setting up a CI/CD pipeline.           |
+
 
 ## Pull Requests (PRs)
 
