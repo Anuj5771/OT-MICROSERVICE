@@ -1,6 +1,6 @@
-| Created/Modified | Version | Author               | Comment         | L0 Reviewer      |L1 Reviewer | L2 Reviewer |
-|-------------------|---------|----------------------|-----------------|------------------|------------------|------------------|
-| 10-02-2024        | V1     | Anuj yadav | L0    |  komal Jaiswal |    |    |
+| **Author** | **Created on** | **Version** | **Last updated by**|**Internal Reviewer** |**Reviewer L0** |**Reviewer L1** |**Reviewer L2** |
+|------------|---------------------------|-------------|---------------------|-------------|-------------|-------------|-------------|
+| Anuj yadav|   12-02-2025             | v1.1          | Anuj yadav        |  Komal Jaiswal |  |   |      |
 
 ## What is PostgreSQL?
 PostgreSQL is an open-source, object-relational database system that uses SQL. It’s known for its reliability, performance, and support for advanced features like complex queries, custom data types, and ACID compliance.
