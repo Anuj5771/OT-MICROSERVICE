@@ -2,8 +2,6 @@
 |------------|---------------------------|-------------|---------------------|-------------|-------------|-------------|-------------|
 | Anuj yadav|   12-02-2025             | v1.1          | Anuj yadav        |  Komal Jaiswal |  |   |      |
 
-## What is PostgreSQL?
-PostgreSQL is an open-source, object-relational database system that uses SQL. It’s known for its reliability, performance, and support for advanced features like complex queries, custom data types, and ACID compliance.
 
 ## Table of Contents
 
@@ -21,7 +19,8 @@ PostgreSQL is an open-source, object-relational database system that uses SQL. I
 12. [Contact Information](#contact-information)
 13. [References](#references)
 
-
+## What is PostgreSQL?
+PostgreSQL is an open-source, object-relational database system that uses SQL. It’s known for its reliability, performance, and support for advanced features like complex queries, custom data types, and ACID compliance.
 
 ## Why use PostgreSQL
 | Benefits   | Description                     |
@@ -84,17 +83,6 @@ createuser --interactive --pwprompt
 
 ```
 
-## PostgreSQL Dependencies on Ubuntu
-
-| **Category**                   | **Package(s)**                                                                 |
-|---------------------------------|-------------------------------------------------------------------------------|
-| **Core PostgreSQL Packages**    | `postgresql`, `postgresql-contrib`                                             |
-| **Development Libraries**       | `postgresql-server-dev-all`, `build-essential`, `libssl-dev`, `libreadline-dev`, `zlib1g-dev`, `libicu-dev`, `libxml2-dev` |
-| **Optional Libraries**          | `libbz2-dev`, `python3`                                                       |
-| **PostgreSQL Extensions**       | `postgis` (for GIS), `pg_partman` (for partitioning)                          |
-| **GUI Tools**                   | `pgadmin4` (for GUI management of PostgreSQL)                                  |
-| **Compression Tools**           | `bzip2`, `xz-utils`, `lz4`                                                    |
-
 
 ## PostgreSQL Architecture
 
@@ -151,14 +139,6 @@ createuser --interactive --pwprompt
 | **File System Level Backup (Physical Backup)** | Copies the actual database files, logs, and configurations. Efficient for large databases and provides a full, faster restore. Ideal for system recovery. |
 
 
-## Extensions & Plugins
-
-| **Section**                   | **Details**                                                                                                                                 |
-|-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| **What are Extensions & Plugins?** | Add-ons that increase the functionality of an application. Typically integrate third-party services.                                         |
-| **Common Use Cases**           | - Enhancing website functionality.<br>- Integrating with external APIs and services.                                                      |
-
----
 
 ## Best Practices & Common Issues
 
