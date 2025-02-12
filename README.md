@@ -175,8 +175,8 @@ PostgreSQL is an open-source, object-relational database system that uses SQL. I
 
 | **Resource**                      | **Description**                               | **Link**                                |
 |------------------------------------|-----------------------------------------------|-----------------------------------------|
-| PostgreSQL Official Documentation  | Official documentation for PostgreSQL         | [PostgreSQL Docs](https://www.postgresql.org/docs/) |
-| PostgreSQL Wiki                    | Community-driven PostgreSQL Wiki              | [PostgreSQL Wiki](https://wiki.postgresql.org/) |
-| PostgreSQL GitHub Repository       | The official PostgreSQL GitHub repository     | [PostgreSQL GitHub](https://github.com/postgres/postgres) |
+| PostgreSQL Official Documentation  | Official documentation for PostgreSQL         | [PostgreSQL Docs](SQL Command Reference - PostgreSQL Docs) |
+| PostgreSQL Wiki                    | Community-driven PostgreSQL Wiki              | [PostgreSQL Wiki](PostgreSQL Community Wiki) |
+| PostgreSQL GitHub Repository       | The official PostgreSQL GitHub repository     | [PostgreSQL GitHub](https://github.com/Anuj5771/OT-MICROSERVICE/edit/main/README.md) |
 
 
