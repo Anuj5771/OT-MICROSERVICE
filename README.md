@@ -45,6 +45,44 @@ PostgreSQL is an open-source, object-relational database system that uses SQL. I
 | **Network**              | Port 5432 open for PostgreSQL      |
 | **SSH**                  | Port 22 for remote access         |
 
+## Step:1 Update package list
+```bash
+sudo apt update
+```
+## Step:2 Install PostgreSQL
+```bash
+sudo apt install postgresql postgresql-contrib
+
+```
+## Verify Installation
+```bash
+psql --version
+
+```
+## Step 4: Start and Enable PostgreSQL Service
+```bash
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+
+```
+ 
+## Step 5: Access PostgreSQL
+```bash
+sudo -i -u postgres
+
+```
+
+## Step 6: Exit PostgreSQL Prompt
+```bash
+\q
+
+
+```
+## Step 7: (Optional) Create a new PostgreSQL role/user
+```bash
+createuser --interactive --pwprompt
+
+```
 
 ## PostgreSQL Dependencies on Ubuntu
 
