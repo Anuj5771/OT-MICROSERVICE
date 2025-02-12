@@ -1,4 +1,4 @@
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/b8772f98-499e-4b01-a2b0-dad642cb0f03)
 
 # GitHub Features Documentation
 
@@ -51,6 +51,13 @@ git add .
 git commit -m "update_files"
 ```
 ## Branches
+![Uploading image.png…]()
+
+"Branches in Git enable developers to work on different features or fixes in isolation within the same repository. Each branch is essentially a pointer to a specific commit, allowing developers to work on separate tasks without affecting the main codebase."
+
+Main Branch: The default branch where the final, stable version of the code resides.
+
+Feature Branches: Branches are created from the main branch to work on specific features, bug fixes, or tasks without impacting the main codebase.
 
 ### Creating and Managing Branches
 
@@ -62,11 +69,13 @@ To create a new branch, use the `git branch` command followed by the branch name
   git checkout -b <branch-name>
 ```
 ## Switching Between Branches
+
 To switch between branches, you can use the git checkout or git switch command:
 ```bash
  git checkout <branch-name>
 ```
 ## Deleting Branches
+
 ```bash
 Delete a branch locally
 git branch -d <branch-name>
