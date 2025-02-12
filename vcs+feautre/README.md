@@ -118,87 +118,104 @@ git push origin --delete <branch-name>
 | **Example Workflow**                 | Automate testing or deployment using GitHub Actions.                      | See example below for setting up a CI/CD pipeline.           |
 
 
+# GitHub Features Documentation
+
 ## Pull Requests (PRs)
 
-A **Pull Request (PR)** is a feature that allows developers to notify team members when they have completed a feature or a set of changes and wish to merge those changes into the main branch. The typical process for a pull request involves the following steps:
+A Pull Request (PR) is a feature that allows developers to notify team members when they have completed a feature or a set of changes and wish to merge those changes into the main branch. Below is the typical process for creating and managing pull requests.
 
-1. **Creating a Pull Request**: After pushing commits to a branch, the developer creates a PR to summarize the changes made and their purpose.
-   
-2. **Reviewing the PR**: Team members review the PR, providing feedback, suggesting improvements, or approving the changes.
+| **Step**                | **Description**                                                                 | **Commands/Actions**                                             |
+|-------------------------|---------------------------------------------------------------------------------|------------------------------------------------------------------|
+| **1. Creating a Pull Request** | After pushing commits to a branch, a developer creates a PR to summarize the changes made and their purpose. | - Navigate to the GitHub repository. <br> - Click on the "New Pull Request" button. <br> - Select the base and compare branches. <br> - Add a title and description, then click "Create Pull Request". |
+| **2. Reviewing the PR** | Team members review the PR, provide feedback, suggest improvements, or approve the changes. | - Comment on specific lines of code using the inline comment feature. <br> - Approve the PR or request changes. |
+| **3. Merging the PR**   | Once the PR is reviewed and approved, it can be merged into the main branch, integrating the new changes into the main codebase. | - Click the "Merge" button to merge the PR into the base branch. <br> - Alternatively, use `git merge <branch-name>` in the command line after fetching and checking out the main branch. |
 
-3. **Merging the PR**: Once the PR is approved, it can be merged into the main branch, integrating the new changes into the main codebase.
+---
 
-Pull requests are a critical part of the collaborative development process, allowing for code reviews, discussions, and quality control before new code is integrated into the main project.
+## Key Benefits of Pull Requests
+
+| **Feature**                      | **Description**                                                           |
+|-----------------------------------|---------------------------------------------------------------------------|
+| **Code Reviews**                  | Pull requests allow for peer reviews of changes before they are merged.  |
+| **Discussions**                   | Team members can discuss specific code changes and suggest improvements. |
+| **Quality Control**               | Ensures that changes meet project standards before integration.          |
+| **Track Changes**                 | Pull requests keep a detailed record of what changes were made and why.  |
+| **Integration Testing**           | Pull requests can trigger automated tests to ensure changes don’t break the project. |
+
+---
+
+### Conclusion
+
+Pull requests are an essential feature of collaborative development. They help maintain code quality, encourage discussions, and ensure that changes are thoroughly reviewed before being merged into the main branch. 
+
+
+# GitHub Features Documentation
+
 ## Issues
 
 GitHub **Issues** are used to track bugs, tasks, feature requests, and other actionable items within a project. They help you organize and manage work, facilitating team communication and collaboration.
 
 ### Creating and Managing Issues
 
-You can create and manage issues directly from the "Issues" tab in your repository. Here's how:
+| **Step**                           | **Description**                                                                 | **Actions**                                                       |
+|------------------------------------|---------------------------------------------------------------------------------|------------------------------------------------------------------|
+| **1. Creating a New Issue**        | To create a new issue:                                                           | - Go to the "Issues" tab of your repository. <br> - Click on "New Issue". <br> - Add a **title** and **description**. <br> - Optionally, assign **labels**, **milestones**, or **assignees**. |
+| **2. Assigning Labels and Milestones** | Use labels to categorize issues (e.g., bug, enhancement) and milestones to track progress. | - In the issue, click "Labels" to add tags like bug or enhancement. <br> - Assign a milestone for progress tracking. |
+| **3. Assigning to Team Members**   | Assign issues to specific team members to ensure clear ownership and accountability. | - Use the **Assignees** dropdown to select responsible team members. |
+| **4. Closing an Issue**            | Once the issue's work is complete, you can close it manually, or it will close automatically when the linked PR is merged. | - Click "Close Issue" to mark the issue as resolved. <br> - The issue closes automatically when a linked PR is merged. |
+| **5. Reopening an Issue**          | If the issue needs further attention, reopen it by clicking the "Reopen Issue" button. | - Click on **Reopen Issue** to bring it back into the active list. |
 
-#### 1. **Creating a New Issue**
-To create a new issue:
-- Go to the "Issues" tab of your repository.
-- Click on the **New Issue** button.
-- Provide a **title** and a **description** for the issue.
-- Optionally, you can assign **labels**, **milestones**, or **assignees** to better organize and track the issue.
+---
 
-#### 2. **Assigning Labels and Milestones**
-- **Labels** can be used to categorize issues (e.g., bug, enhancement, question).
-- **Milestones** help track progress toward specific goals or versions.
-
-#### 3. **Assigning to Team Members**
-- You can assign issues to specific team members to ensure accountability and clear ownership.
-
-#### 4. **Closing an Issue**
-Once the work related to the issue is complete, you can close the issue by clicking on the **Close Issue** button. Alternatively, the issue will automatically close when a pull request linked to it is merged.
-
-#### 5. **Reopening an Issue**
-If you need to reopen a closed issue, simply click the **Reopen Issue** button.
 ## GitHub Actions
-## Key Features
 
-### Feature Overview
+GitHub Actions automate tasks like testing, building, and deploying code based on events in the GitHub repository.
 
-| Feature           | Description                                                           |
-|-------------------|-----------------------------------------------------------------------|
-| **Automation**     | Automate tasks like code testing, building, and deployment.          |
-| **Event-Driven**   | Trigger workflows based on various GitHub events (e.g., push, pull request). |
-| **Custom Workflows** | Create customized workflows for different environments and processes. |
-| **Extensibility**  | Use actions from GitHub’s marketplace or create your own custom actions. |
+### Key Features
+
+| **Feature**                          | **Description**                                                           | **Commands/Setup**                                           |
+|--------------------------------------|---------------------------------------------------------------------------|-------------------------------------------------------------|
+| **Automation**                       | Automate tasks such as code testing, building, and deployment.            | Define automation workflows in `.github/workflows/`.        |
+| **Event-Driven**                     | Trigger workflows based on specific GitHub events like push, pull request, etc. | Specify events in the YAML file (e.g., `on: push`).         |
+| **Custom Workflows**                 | Create customized workflows for different environments or processes.      | Add a custom workflow in the `.github/workflows/` directory. |
+| **Extensibility**                    | Use pre-built actions from GitHub Marketplace or create your own.         | Use `uses: actions/checkout@v2` or define custom actions.    |
+
+# GitHub Features Documentation
 
 ## .gitignore
 
-The `.gitignore` file is a special file in a Git repository that tells Git which files or directories it should ignore. Files listed in the `.gitignore` file won't be tracked, committed, or pushed to a remote repository. This is commonly used to avoid adding unnecessary or sensitive files to the version control system.
+The `.gitignore` file is a special file in a Git repository that tells Git which files or directories it should ignore. Files listed in the `.gitignore` file won't be tracked, committed, or pushed to a remote repository.
 
 ### Why is `.gitignore` Important?
 
-- **Temporary or System Files**: Files generated by your operating system or tools (e.g., logs, cache files, temp files) are not part of your codebase and don't need to be tracked.
-- **Configuration Files**: Files that contain local environment configurations (e.g., API keys, passwords) shouldn’t be shared for security reasons.
-- **Build Artifacts**: When you compile or build your project, it generates files (like binaries or compiled code) that should not be tracked because they can be recreated from the source code.
+| **Reason**                         | **Description**                                                             |
+|------------------------------------|-----------------------------------------------------------------------------|
+| **Temporary or System Files**      | Files generated by the operating system (logs, cache, temp files) don't need to be tracked. |
+| **Configuration Files**            | Local environment files (e.g., API keys, passwords) should not be shared for security reasons. |
+| **Build Artifacts**                | Files like binaries or compiled code that can be recreated from the source code should not be tracked. |
+
+---
 
 ### How Does `.gitignore` Work?
 
-1. **Creating a `.gitignore` File**: You can create a `.gitignore` file in the root of your Git repository.
-2. **Adding Patterns**: In the `.gitignore` file, you list patterns or file names that you want Git to ignore. These patterns can include specific files, directories, or file types.
-3. **Applying the `.gitignore`**: After adding patterns to the `.gitignore` file, Git will stop tracking those files. If the files were already tracked before being added to `.gitignore`, you'll need to manually remove them from the repository using:
-   ```bash
-   git rm --cached <file>
+| **Step**                            | **Description**                                                                                  | **Commands/Actions**                                           |
+|-------------------------------------|--------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
+| **1. Creating a `.gitignore` File** | You can create a `.gitignore` file in the root of your Git repository.                           | - Use `touch .gitignore` to create the file in the root directory. |
+| **2. Adding Patterns**              | In the `.gitignore` file, list patterns or file names that you want Git to ignore.                | - Add patterns like `*.log`, `*.tmp`, or `/node_modules/`.       |
+| **3. Applying the `.gitignore`**    | After adding patterns, Git will stop tracking those files. If already tracked, manually remove them. | - Run `git rm --cached <file>` to remove previously tracked files. |
+
+---
+
 ## Collaboration Tools
 
 GitHub provides several features to enhance collaboration among developers working on the same project.
 
-### 1. **Forking and Cloning**
-- **Fork Repositories**: Forking allows you to create your own copy of someone else’s repository to experiment with changes before contributing back.
-- **Clone Repositories**: Cloning enables you to create a local copy of a repository, allowing you to work on the project offline and push changes back to GitHub.
-
-### 2. **Branch Protection Rules**
-- **Enforce Standards**: Protect your branches by requiring specific checks like code reviews, status checks (CI/CD), or specific approval requirements before merging.
-- **Prevent Force Pushes**: Prevent force pushes or deletion of important branches to maintain stability.
+| **Feature**                          | **Description**                                                          | **Commands/Actions**                                          |
+|--------------------------------------|--------------------------------------------------------------------------|--------------------------------------------------------------|
+| **1. Forking and Cloning**           | Forking allows you to create your own copy of someone else’s repository to experiment with changes. Cloning enables a local copy for offline work. | - To fork a repo: Click "Fork" on the repository page. <br> - To clone a repo: `git clone <repo-url>` |
+| **2. Branch Protection Rules**      | Protect your branches by enforcing standards such as code reviews or status checks (CI/CD) before merging. Prevent force pushes or deletion of important branches. | - Set branch protection in the repository settings. <br> - Enable required checks and reviews before merging. |
 
 ---
-
 ## Conclusion
 
 GitHub simplifies software development with version control, collaboration, automation, and security features. It helps manage code through repositories, branching, and pull requests, while **GitHub Actions** automates testing and deployment. 
