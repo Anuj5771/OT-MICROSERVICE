@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/87249c8b-1103-4702-b9ff-1aba0523a954)
+![image](https://github.com/user-attachments/assets/ba6bb073-02fc-4437-9994-e96c9ec179a9)
 
 
 # GitHub Features Documentation
@@ -52,7 +52,7 @@ git add .
 git commit -m "update_files"
 ```
 ## Branches
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/a110d80a-9b83-45a5-a0b8-e1b2041f9ac7)
 
 "Branches in Git enable developers to work on different features or fixes in isolation within the same repository. Each branch is essentially a pointer to a specific commit, allowing developers to work on separate tasks without affecting the main codebase."
 
@@ -90,7 +90,6 @@ git push origin --delete <branch-name>
 ```
 
 ## Pull Requests (PRs)
-![Uploading image.png…]()
 
 A **Pull Request (PR)** is a feature that allows developers to notify team members when they have completed a feature or a set of changes and wish to merge those changes into the main branch. The typical process for a pull request involves the following steps:
 
