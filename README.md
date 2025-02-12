@@ -154,7 +154,7 @@ PostgreSQL is an open-source, object-relational database system that uses SQL. I
 
 ## Conclusion
 
-| **Summary**                                                                                                      |
+|                                                                                                   |
 |-------------------------------------------------------------------------------------------------------------------|
 | Extensions and plugins enhance application functionality but must be managed carefully to avoid performance issues, security risks, and conflicts. Following best practices and ensuring high availability are crucial for successful implementation. |
 
