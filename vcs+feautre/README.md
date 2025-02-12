@@ -1,4 +1,4 @@
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/36ebdce2-acd5-4171-8892-787f5a6cb24d)
 
 # GitHub Features Documentation
 
@@ -89,6 +89,7 @@ git push origin --delete <branch-name>
 ```
 
 ## Pull Requests (PRs)
+![Uploading image.png…]()
 
 A **Pull Request (PR)** is a feature that allows developers to notify team members when they have completed a feature or a set of changes and wish to merge those changes into the main branch. The typical process for a pull request involves the following steps:
 
