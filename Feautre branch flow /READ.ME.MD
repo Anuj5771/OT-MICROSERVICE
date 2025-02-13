@@ -22,7 +22,7 @@ The **Feature Branch Workflow** is a Git-based development model designed to str
 
 ## Feature Branch Workflow
 
-![Feature Branch Workflow](path-to-your-screenshot1.png)
+
 
 ### Steps for Feature Branch Workflow:
 1. **Create a New Branch for Each Feature**: Start by creating a separate branch for each feature or bug fix.
