@@ -69,10 +69,12 @@ The **Feature Branch Workflow** is a robust approach for managing feature develo
 
 ## Contact Information
 
-| Name          | Email Address                                 |
-| ------------- | --------------------------------------------- |
-| Neelesh Kumar | [nilesh.rajput.snaatak@mygurukulam.co](mailto:nilesh.rajput.snaatak@mygurukulam.co) |
-| GitHub        | [devneelesh921](https://github.com/devneelesh921) |
+## Contact Information
+
+| Name         | Email Address                                   |
+| ------------ | ----------------------------------------------- |
+| Anuj Yadav   | [anuj.yadav@mygurukulam.co](mailto:anuj.yadav@mygurukulam.co) |
+| GitHub       | [anuj169](https://github.com/anuj169)            |
 
 ## References
 
