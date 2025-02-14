@@ -103,5 +103,4 @@ Git Flow is an excellent choice for projects that require structured development
 | **Resource**                     | **Description**                             | **Link**                                                        |
 |-----------------------------------|---------------------------------------------|-----------------------------------------------------------------|
 | Official Documentation Git Flow  | Official documentation for Git Flow         | [Git Flow Documentation](https://nvie.com/posts/a-successful-git-branching-model/) |
-| PostgreSQL GitHub Repository      | The official PostgreSQL GitHub Repository   | [PostgreSQL GitHub](https://github.com/postgresql/postgresql)  |
 | GitHub Documentation              | Official GitHub documentation for using Git | [GitHub Docs](https://docs.github.com/en/github) |
