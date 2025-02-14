@@ -1,3 +1,8 @@
+
+| **Author** | **Created on** | **Version** | **Last updated by**|**Internal Reviewer** |**Reviewer L0** |**Reviewer L1** |**Reviewer L2** |
+|------------|---------------------------|-------------|---------------------|-------------|-------------|-------------|-------------|
+| Anuj yadav|   14-02-2025             | v1.1          | Anuj yadav        |  Komal Jaiswal |  |   |      |
+
 - [Introduction](#introduction)
 - [Why Use Git Flow](#why-use-git-flow)
 - [Git Flow Workflow](#git-flow-workflow)
@@ -21,9 +26,7 @@ Git Flow is ideal for projects requiring:
 
 
 
-
-
-
+images
 
 ## Git Flow Workflow
 
@@ -80,3 +83,25 @@ Versioning in GitFlow refers to tagging specific commits in the repository with 
 
 ## Conclusion
 Git Flow is an excellent choice for projects that require structured development and reliable release cycles. While it may introduce complexity for small teams, its benefits in managing larger projects outweigh the challenges, ensuring stability and flexibility in software development.
+
+
+
+## Contacts
+
+| **Name**      | **Email Address**               |
+|---------------|----------------------------------|
+| Anuj Yadav    | anuj.yadav@mygurukulam.co        |
+
+## Github
+
+| **Username** | **URL** |
+|--------------|---------------------------------|
+| anuj169      | [anuj169 gitlink](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/blob/Anuj-SCRUM-6/OT%20MS%20Understanding/Application/Employee/POC/README.MD) |
+
+## References
+
+| **Resource**                     | **Description**                             | **Link**                                                        |
+|-----------------------------------|---------------------------------------------|-----------------------------------------------------------------|
+| Official Documentation Git Flow  | Official documentation for Git Flow         | [Git Flow Documentation](https://nvie.com/posts/a-successful-git-branching-model/) |
+| PostgreSQL GitHub Repository      | The official PostgreSQL GitHub Repository   | [PostgreSQL GitHub](https://github.com/postgresql/postgresql)  |
+| GitHub Documentation              | Official GitHub documentation for using Git | [GitHub Docs](https://docs.github.com/en/github) |
