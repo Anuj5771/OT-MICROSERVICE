@@ -19,19 +19,11 @@ Git Flow is ideal for projects requiring:
 - **Parallel workstreams for features, bug fixes, and releases**: Git Flow allows different branches for features, bug fixes, and releases, making it easier to manage multiple tasks at once without interference.
 ## Git Flow Workflow
 
-# Git Flow Documentation
 
-## Introduction
-Git Flow is a robust branching model for Git, designed to support projects with release cycles. It introduces defined roles for different branches and provides a structured way to handle feature development, hotfixes, and releases.
 
-## Why Use Git Flow
-Git Flow is ideal for projects requiring:
 
-| **Purpose**                                                 | **Description** |
-|-------------------------------------------------------------|-----------------|
-| Well-defined versioning and release management              | Git Flow provides a structured way to manage versions, ensuring that releases are handled in an organized manner. |
-| A stable production branch while accommodating ongoing development | By keeping a stable `main` branch and using `develop` for ongoing work, Git Flow ensures that the production environment is always ready for deployment. |
-| Parallel workstreams for features, bug fixes, and releases  | Git Flow allows different branches for features, bug fixes, and releases, making it easier to manage multiple tasks at once without interference. |
+
+
 
 ## Git Flow Workflow
 
