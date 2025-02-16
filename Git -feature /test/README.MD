@@ -1,5 +1,5 @@
 # Employee POC Setup
-  
+
 | **Author**    | **Created on** | **Version** | **Last updated by** | **Internal Reviewer** | **Reviewer L0** | **Reviewer L1** | **Reviewer L2** |
 |---------------|----------------|-------------|---------------------|-----------------------|-----------------|-----------------|-----------------|
 | Anuj Yadav    | 12-02-2025     | v1.1        | Anuj Yadav          | Komal Jaiswal         |                 |                 |                 |
@@ -41,6 +41,7 @@
 ### 1. Update Package List
 ```bash
 sudo apt update
+
 
   Updates the list of available packages and their versions from the configured repositories.
  Ensures you have the latest information about available software packages before installing anything.
