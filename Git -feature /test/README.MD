@@ -60,19 +60,21 @@ Refer to the [Golang Installation Guide](https://github.com/snaatak-Zero-Downtim
 ```bash
 go version
 ```
+ - go version go1.22.2 linux/amd64
 
 ### 2.2 Install Make
 ```bash
 sudo apt install make
 make --version
 ```
+- GNU Make Version: 4.3
 
 ### 2.3 Install jq
 ```bash
 sudo apt install -y jq
 jq --version
 ```
-
+- jq version is 1.7.1.
 ---
 
 ## 3. ScyllaDB Setup
@@ -82,6 +84,7 @@ Refer to the [ScyllaDB Installation Guide](https://github.com/snaatak-Zero-Downt
 ```bash
 scylla --version
 ```
+- Scylla version is 6.2.3.
 
 ### 3.2 Configure ScyllaDB
 Refer to the [ScyllaDB Configuration Guide](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/tree/0f733ece2fe86ac7ecc0bb83937310b5698e63fa/Common/Software/ScyllaDB/Configuration).
@@ -109,6 +112,7 @@ Refer to the [Redis Installation Guide](https://github.com/snaatak-Zero-Downtime
 ```bash
 redis-server --version
 ```
+- Redis version is 7.0.15.
 
 ### 4.2 Configure Redis CLI
 ```bash
