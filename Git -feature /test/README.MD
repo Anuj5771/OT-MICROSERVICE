@@ -141,6 +141,30 @@ cqlsh 172.31.0.27 9042 -u cassandra -p cassandra
 CREATE USER scylladb WITH PASSWORD 'password' SUPERUSER;
 CREATE KEYSPACE employee_db WITH REPLICATION = { 'class': 'SimpleStrategy', 'replication_factor': 1 };
 ```
+Note:
+- Never use the default username and password when setting up your database. It is important to use a strong password for security best 
+  practices.
+
+- Create a new user in ScyllaDB with limited control over keyspaces, tables, and permissions. This approach is useful when you want to move 
+  away from the default cassandra user and use a dedicated admin user for better security.
+
+
+```bash
+CREATE USER scylladb WITH PASSWORD 'strongpassword' NOSUPERUSER;
+```
+
+- This command creates a new user scylladb with the specified strong password and without superuser privileges.
+- Grant specific permissions to the newly created user for accessing and modifying data in the keyspace.
+
+
+```bash
+GRANT SELECT, MODIFY ON KEYSPACE employee_db TO scylladb;
+```
+- SELECT: Allows reading data from the keyspace.
+- MODIFY: Allows inserting, updating, and deleting records in the keyspace
+
+
+
 
 ###  Update Configuration File
 ```bash
