@@ -157,6 +157,10 @@ redis-server --version
 redis-cli
 ACL SETUSER scylla on >password ~* +@all
 ```
+### 13. Update Redis Configuration
+
+- [Kindly follow the link below for this](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/tree/Mohit-SCRUM-12/Common/Software/Redis/Configuration).
+- Opens the Redis configuration file for editing. To bind Redis to specific IP addresses (e.g., 127.0.0.1,172.31.24.234 and a private IP) for security and accessibility.
 
 ## Database Migration
 
