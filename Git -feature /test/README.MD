@@ -45,8 +45,6 @@ sudo apt update
   Updates the list of available packages and their versions from the configured repositories.
  Ensures you have the latest information about available software packages before installing anything.
 
----
-
 ### 2. Git clone repository 
 ```bash
  git clone https://github.com/OT-MICROSERVICES/employee-api.git
