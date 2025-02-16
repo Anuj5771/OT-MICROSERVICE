@@ -126,11 +126,11 @@ scylla --version
 
 ###  Connect to ScyllaDB using cqlsh
 ```bash
-cqlsh <Private-IP> 9042 -u cassandra -p cassandra
+cqlsh 172.31.0.27 9042 -u cassandra -p cassandra
 ```
 **Example**
 ```bash
-cqlsh 172.31.0.27 9042 -u cassandra -p cassandra
+cqlsh <Private-ip> 9042 -u cassandra -p cassandra
 ```
 - The command connects to a ScyllaDB instance at <private_IP> on port 9042 using the cqlsh tool, with the username and password set to cassandra.
 - Connects to the ScyllaDB server using CQLSH, allowing you to execute queries, manage keyspaces, and interact with the database.
