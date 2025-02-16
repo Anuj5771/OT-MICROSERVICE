@@ -1,17 +1,17 @@
 # Employee Poc Setup
   
-| **Author** | **Created on** | **Version** | **Last updated by**|**Internal Reviewer** |**Reviewer L0** |**Reviewer L1** |**Reviewer L2** |
-|------------|---------------------------|-------------|---------------------|-------------|-------------|-------------|-------------|
-| Anuj yadav|   12-02-2025             | v1.1          | Anuj yadav        |  Komal Jaiswal |  |   |      |
+| **Author**    | **Created on** | **Version** | **Last updated by** | **Internal Reviewer** | **Reviewer L0** | **Reviewer L1** | **Reviewer L2** |
+|---------------|----------------|-------------|---------------------|-----------------------|-----------------|-----------------|-----------------|
+| Anuj Yadav    | 12-02-2025     | v1.1        | Anuj Yadav          | Komal Jaiswal         |                 |                 |                 |
 
-# Step-by-step installation of Employee API
+# Step-by-step Installation of Employee API
 
-# Employee API Setup Guide  
+## Employee API Setup Guide  
 
-## Table of Contents  
+### Table of Contents  
 1. [System Setup](#system-setup)  
    - [Update Package List](#update-package-list)  
-   - [Git clone repository ](#Git-clone-repository )  
+   - [Git Clone Repository](#git-clone-repository)  
 2. [Golang Setup](#golang-setup)  
    - [Install Golang](#install-golang)  
    - [Install Make](#install-make)  
@@ -31,11 +31,12 @@
    - [Run Database Migrations](#run-database-migrations)  
 6. [Application Setup](#application-setup)  
    - [Test the Application](#test-the-application)  
-   - [Configure `main.go` File](#configure-maingo-file)  
+   - [Configure main.go File](#configure-maingo-file)  
    - [Run the Application](#run-the-application)  
    - [Test via Swagger UI](#test-via-swagger-ui)  
-7. [Authors](#authors)  
+7. [Authors](#authors)
 
+---
 
 ### 1. Update Package List
 ```bash
