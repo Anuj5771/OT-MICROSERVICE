@@ -170,7 +170,7 @@ GRANT SELECT, MODIFY ON KEYSPACE employee_db TO scylladb;
 ```bash
   172.31.0.27 :8080/---> config.yaml
 ```
-- Update config.yaml with Private IP
+- Update the config.yaml file by replacing localhost with your private IP address.
 
 ## Redis Setup
 
