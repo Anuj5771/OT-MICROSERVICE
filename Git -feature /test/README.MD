@@ -41,10 +41,7 @@
 ### 1. Update Package List
 ```bash
 sudo apt update
-
-
-  Updates the list of available packages and their versions from the configured repositories.
- Ensures you have the latest information about available software packages before installing anything.
+```
 
 ### 2. Git clone repository 
 ```bash
@@ -56,7 +53,6 @@ Clones the `Employee API` repository from GitHub to your local machine.
 
 To get the source code of the project so you can set it up and run it locally
 
----
 
 
 ### 3.  Golang Installation 
