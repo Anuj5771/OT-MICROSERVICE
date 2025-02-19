@@ -1,151 +1,245 @@
-| Created/Modified | Version | Author               | Comment         | L0 Reviewer      |L1 Reviewer | L2 Reviewer |
-|-------------------|---------|----------------------|-----------------|------------------|------------------|------------------|
-| 10-02-2024        | V1     | Anuj yadav | L0    |  komal Jaiswal |    |    |
+# Employee API POC
+
+| **Author** | **Created on** | **Version** | **Last updated by**|**Internal Reviewer** |**Reviewer L0** |**Reviewer L1** |**Reviewer L2** |
+|------------|---------------------------|-------------|---------------------|-------------|-------------|-------------|-------------|
+| Anuj yadav|   12-02-2025             | v1.1          | Anuj yadav     |  Siddharth pawar | Tarun Singh  | Abhishek  |      |
 
 
-## Step:1 git clone repository 
+# step-by-step installation guide
+
+## **Table of Contents**
+
+<details>
+  <summary>System Setup</summary>
+
+  - [ Update Package List](#1-update-package-list)
+  - [ Git Clone Repository](#2-git-clone-repository)
+
+</details>
+
+<details>
+  <summary>Golang Setup</summary>
+
+  - [ Install Golang](#3-install-golang)
+  - [ Install Make](#4-install-make)
+  - [ Install jq](#5-install-jq)
+
+</details>
+
+<details>
+  <summary>ScyllaDB Setup</summary>
+
+  - [ Install ScyllaDB](#6-install-scylladb)
+  - [ Configure ScyllaDB](#7-configure-scylladb)
+  - [ Connect to ScyllaDB using cqlsh](#8-connect-to-scylladb-using-cqlsh)
+  - [ Create Superuser & Keyspace](#9-create-superuser--keyspace)
+  - [ Update Configuration File](#10-update-configuration-file)
+
+</details>
+
+<details>
+  <summary>Redis Setup</summary>
+
+  - [ Install Redis](#11-install-redis)
+  - [ Update Redis Configuration](#12-update-redis-configuration)
+
+</details>
+
+<details>
+  <summary>Database Migration</summary>
+
+  - [ Install Migrate Tool](#13-install-migrate-tool)
+  - [Update the migration.json with ScyllaDB server private IP](#14-update-the-migrationjson-with-scylladb-server-private-ip)
+
+
+</details>
+
+<details>
+  <summary>Application Setup</summary>
+
+  - [ Test the Application](#17-test-the-application)
+  - [ Configure main.go File](#18-configure-maingo-file)
+  - [ Run the Application](#19-run-the-application)
+  - [ Test via Swagger UI](#20-test-via-swagger-ui)
+
+</details>
+
+<details>
+  <summary>Authors</summary>
+
+  - [ Contributors](#21-Contact)
+
+</details>
+
+## System Setup
+
+### 1. Update Package List
 ```bash
- git clone https://github.com/OT-MICROSERVICES/employee-api.git
- cd employee-api/
+sudo apt update
 ```
+- Updating the Package List
 
-
-## Step:2  Install Golang
+### 2. Git Clone Repository
 ```bash
- sudo apt update
- sudo apt install golang-go
- go version
+git clone https://github.com/OT-MICROSERVICES/employee-api.git
+cd employee-api/
 ```
+- Cloning the Git Repository for Employee API Setup
 
-## Step:3   Install Make
+## Golang Setup
+
+### 3. Install Golang
+[Refer to the Golang installation guide](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/tree/Anuj-SCRUM-6/Common/Software%20/Golang/Installation).
 ```bash
- sudo apt update
- sudo apt install make
-
+go version
 ```
-## Step:4 . Install jq 
-```bash
-sudo apt install -y jq
+- go version go1.22.2 linux/amd64
 
-```
+### 4. Install Make
+ [Refer to the Make installation guide](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/tree/Nikita-SCRUM-8/Common/Software/Make/Installation%20)
  
-## step:5  install ScyllaDB
 ```bash
-sudo mkdir -p /etc/apt/keyrings
-sudo gpg --homedir /tmp --no-default-keyring --keyring /etc/apt/keyrings/scylladb.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys a43e06657bac99e3
-sudo wget -O /etc/apt/sources.list.d/scylla.list http://downloads.scylladb.com/deb/debian/scylla-6.2.list
-sudo apt-get update
-sudo apt-get install -y scylla
+make --version
+```
+- GNU Make Version: 4.3
+- Make automates the build process by executing defined tasks and dependencies.
+
+### 5. Install jq
+```bash
+sudo apt install jq -y
+jq --version
+```
+- jq version is 1.7.1.
+- jq is a command-line tool for processing and manipulating JSON data.
+
+## ScyllaDB Setup
+
+### 6. Install ScyllaDB
+[Refer to the ScyllaDB Installation Guide](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/tree/Rohit-SCRUM-16/OT%20MS%20Understanding/Database/ScyllaDB/POC).
+```bash
+scylla --version
+```
+- Scylla version is 6.2.3.
+
+### 7. Configure ScyllaDB
+[Refer to the ScyllaDB Configuration Guide](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/tree/0f733ece2fe86ac7ecc0bb83937310b5698e63fa/Common/Software/ScyllaDB/Configuration).
+
+### 8. Connect to ScyllaDB using cqlsh
+```bash
+cqlsh 172.31.0.27 9042 -u cassandra -p cassandra
+```
+**Example**
+```bash
+cqlsh 172.31.0.27 9042 -u cassandra -p cassandra
+```
+- The command connects to a ScyllaDB instance at <private_IP> on port 9042 using the cqlsh tool, with the username and password set to cassandra.
+- Connects to the ScyllaDB server using CQLSH, allowing you to execute queries, manage keyspaces, and interact with the database.
+
+### 9. Create Superuser & Keyspace
+```bash
+CREATE USER scylladb WITH PASSWORD 'password' SUPERUSER;
+CREATE KEYSPACE employee_db WITH REPLICATION = { 'class': 'SimpleStrategy', 'replication_factor': 1 };
+```
+Note:
+- Never use the default username and password when setting up your database. It is important to use a strong password for security best 
+  practices.
+
+- Create a new user in ScyllaDB with limited control over keyspaces, tables, and permissions. This approach is useful when you want to move 
+  away from the default cassandra user and use a dedicated admin user for better security.
 
 
+```bash
+CREATE USER scylladb WITH PASSWORD 'strongpassword' NOSUPERUSER;
 ```
 
+- This command creates a new user scylladb with the specified strong password and without superuser privileges.
+- Grant specific permissions to the newly created user for accessing and modifying data in the keyspace.
 
-## step:6 To configure ScyllaDB
 
 ```bash
- - seeds: <private_ip>
-- listen_address: <private_ip>
-- rpc_address: <private_ip>
- 
+GRANT SELECT, MODIFY ON KEYSPACE employee_db TO scylladb;
 ```
-
-## step:7 Cassandra login scyllaDB
-```bash
-authenticator: PasswordAuthenticator
-authorizer: CassandraAuthorizer
-
-```
+- SELECT: Allows reading data from the keyspace.
+- MODIFY: Allows inserting, updating, and deleting records in the keyspace
 
 
-## step:8  configuration file 
+
+### 10. Update Configuration File
 
 ```bash
- vi config.yml <private ip>
+  172.31.0.27:8080/---> config.yaml
 ```
+- Update the config.yaml file by replacing localhost with your private IP address.
 
 
+## Redis Setup
 
-
-
-## step:9 configuring ScyllaDB I/O settings
+### 11. Install Redis
+[Refer to the Redis Installation Guide](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/blob/Mohit-SCRUM-12/Common/Software/Redis/Installation/README.md).
 ```bash
-sudo /opt/scylladb/scripts/scylla_io_setup
-sudo systemctl start scylla-server
-cqlsh 172.31.44.148 -u cassandra -p cassandra
+redis-server --version
 ```
+- Redis version is 7.0.15.
 
 
+### 12. Update Redis Configuration
 
-## step:10 cassandra login 
-```bash
- CREATE USER scylladb WITH PASSWORD 'password' SUPERUSER;
- CREATE KEYSPACE employee_db WITH REPLICATION = { 'class': 'SimpleStrategy', 'replication_factor': 1 };
+- [Kindly follow the link below for this](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/tree/Mohit-SCRUM-12/Common/Software/Redis/Configuration).
 
-
-```
-
-## step:11 Redis Installation
-```bash
-sudo apt-get install lsb-release curl gpg
-curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
-sudo chmod 644 /usr/share/keyrings/redis-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
-sudo apt-get update
-sudo apt-get install redis
-sudo systemctl enable redis-server
-sudo systemctl start redis-server
-
-
-```
-## step:12 Redis cli configure
 ```bash
 redis-cli
 ACL SETUSER scylla on >password ~* +@all
 ```
+- Example
 
-
-## step:13 Update the Redis configuration file (
 ```bash
-Update the Redis configuration file (/etc/redis/redis.conf) to bind to the private
-```
-## Step:14 Install migrate Tool
-```bash
-  curl -L https://github.com/golang-migrate/migrate/releases/download/v4.15.2/migrate.linux-amd64.tar.gz | tar xvz
-  sudo mv migrate /usr/local/bin/migrate
-  migrate --version
+ACL SETUSER scylla on >"S!cUr3P@ssw0rd#2025" ~data:* +@read +@write
 
 ```
+- Opens the Redis configuration file for editing. To bind Redis to specific IP addresses (e.g., 127.0.0.1,172.31.24.234 and a private IP) for security and accessibility.
 
-## Step:15 Run Database Migrations
+## Database Migration
+
+### 13. Install Migrate Tool
+[Refer to the Migration Installation Guide](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/blob/Nikita-SCRUM-8/Common/Software/Migration/Installation/README.md).
+
+### 14. Update the migration.json with ScyllaDB server private IP
+``` bash
+Path:-  migration.json
+```
+### 15. Check Migration Version
 ```bash
-vi migration.json <private ip>
+migrate --version
+```
+- Migrate version is v4.16.2.
+### 16. Run Database Migrations
+```bash
 make run-migrations
-
 ```
 
+## Application Setup
 
-## Step:16 Test the Application
+### 17. Test the Application
 ```bash
- go test $(go list ./... | grep -v docs | grep -v model | grep -v main.go) -coverprofile cover.out
+go test $(go list ./... | grep -v docs | grep -v model | grep -v main.go) -coverprofile cover.out
 ```
-## Step:17 configuration the main.go files
-```bash
- sudo vi nano main.go
-```
-## Step:18 Test the Application
+
+### 18. Configure main.go File
+[Refer to the main.go Configuration Guide](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/tree/Anuj-SCRUM-6/Common/Software%20/Golang/Configuration)
+
+### 19. Run the Application
 ```bash
 go run main.go
 ```
-## Step:19 Test the Application
-```bash
 
- http://public ip:8081/swagger/index.html
+### 20. Test via Swagger UI
+```bash
+http://<Public-IP>:8080/swagger/index.html
 ```
 
 ## Authors
 
-
-| Name| Email Address      | GitHub | URL |
-|-----|--------------------------|----------|---------|
-|Anuj yadav |anuj.yadav@mygurukulam.co |  anuj169  | https://github.com/anuj169
+### 21. Contact
+| Name | Email Address | GitHub | URL |
+|------|--------------|--------|-----|
+| Anuj Yadav | anuj.yadav@mygurukulam.co | [anuj169](https://github.com/anuj169) | https://github.com/anuj169 |
