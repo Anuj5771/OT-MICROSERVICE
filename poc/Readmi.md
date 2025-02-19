@@ -12,44 +12,44 @@
 <details>
   <summary>System Setup</summary>
 
-  - [ Update Package List](#1-update-package-list)
-  - [ Git Clone Repository](#2-git-clone-repository)
+  
+  - [ Git Clone Repository](#1-git-clone-repository)
 
 </details>
 
 <details>
   <summary>Golang Setup</summary>
 
-  - [ Install Golang](#3-install-golang)
-  - [ Install Make](#4-install-make)
-  - [ Install jq](#5-install-jq)
+  - [ Install Golang](#2-install-golang)
+  - [ Install Make](#3-install-make)
+  - [ Install jq](#4-install-jq)
 
 </details>
 
 <details>
   <summary>ScyllaDB Setup</summary>
 
-  - [ Install ScyllaDB](#6-install-scylladb)
-  - [ Configure ScyllaDB](#7-configure-scylladb)
-  - [ Connect to ScyllaDB using cqlsh](#8-connect-to-scylladb-using-cqlsh)
-  - [ Create Superuser & Keyspace](#9-create-superuser--keyspace)
-  - [ Update Configuration File](#10-update-configuration-file)
+  - [ Install ScyllaDB](#5-install-scylladb)
+  - [ Configure ScyllaDB](#6-configure-scylladb)
+  - [ Connect to ScyllaDB using cqlsh](#7-connect-to-scylladb-using-cqlsh)
+  - [ Create Superuser & Keyspace](#8-create-superuser--keyspace)
+  - [ Update Configuration File](#9-update-configuration-file)
 
 </details>
 
 <details>
   <summary>Redis Setup</summary>
 
-  - [ Install Redis](#11-install-redis)
-  - [ Update Redis Configuration](#12-update-redis-configuration)
+  - [ Install Redis](#10-install-redis)
+  - [ Update Redis Configuration](#11-update-redis-configuration)
 
 </details>
 
 <details>
   <summary>Database Migration</summary>
 
-  - [ Install Migrate Tool](#13-install-migrate-tool)
-  - [Update the migration.json with ScyllaDB server private IP](#14-update-the-migrationjson-with-scylladb-server-private-ip)
+  - [ Install Migrate Tool](#12-install-migrate-tool)
+  - [Update the migration.json with ScyllaDB server private IP](#13-update-the-migrationjson-with-scylladb-server-private-ip)
 
 
 </details>
@@ -57,29 +57,24 @@
 <details>
   <summary>Application Setup</summary>
 
-  - [ Test the Application](#17-test-the-application)
-  - [ Configure main.go File](#18-configure-maingo-file)
-  - [ Run the Application](#19-run-the-application)
-  - [ Test via Swagger UI](#20-test-via-swagger-ui)
+  - [ Test the Application](#14-test-the-application)
+  - [ Configure main.go File](#15-configure-maingo-file)
+  - [ Run the Application](#16-run-the-application)
+  - [ Test via Swagger UI](#17-test-via-swagger-ui)
 
 </details>
 
 <details>
   <summary>Authors</summary>
 
-  - [ Contributors](#21-Contact)
+  - [ Contributors](#18-Contact)
 
 </details>
 
 ## System Setup
 
-### 1. Update Package List
-```bash
-sudo apt update
-```
-- Updating the Package List
 
-### 2. Git Clone Repository
+### 1. Git Clone Repository
 ```bash
 git clone https://github.com/OT-MICROSERVICES/employee-api.git
 cd employee-api/
@@ -88,14 +83,14 @@ cd employee-api/
 
 ## Golang Setup
 
-### 3. Install Golang
+### 2. Install Golang
 [Refer to the Golang installation guide](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/tree/Anuj-SCRUM-6/Common/Software%20/Golang/Installation).
 ```bash
 go version
 ```
 - go version go1.22.2 linux/amd64
 
-### 4. Install Make
+### 3. Install Make
  [Refer to the Make installation guide](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/tree/Nikita-SCRUM-8/Common/Software/Make/Installation%20)
  
 ```bash
@@ -104,7 +99,7 @@ make --version
 - GNU Make Version: 4.3
 - Make automates the build process by executing defined tasks and dependencies.
 
-### 5. Install jq
+### 4. Install jq
 ```bash
 sudo apt install jq -y
 jq --version
@@ -114,17 +109,17 @@ jq --version
 
 ## ScyllaDB Setup
 
-### 6. Install ScyllaDB
+### 5. Install ScyllaDB
 [Refer to the ScyllaDB Installation Guide](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/tree/Rohit-SCRUM-16/OT%20MS%20Understanding/Database/ScyllaDB/POC).
 ```bash
 scylla --version
 ```
 - Scylla version is 6.2.3.
 
-### 7. Configure ScyllaDB
+### 6. Configure ScyllaDB
 [Refer to the ScyllaDB Configuration Guide](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/tree/0f733ece2fe86ac7ecc0bb83937310b5698e63fa/Common/Software/ScyllaDB/Configuration).
 
-### 8. Connect to ScyllaDB using cqlsh
+### 7. Connect to ScyllaDB using cqlsh
 ```bash
 cqlsh 172.31.0.27 9042 -u cassandra -p cassandra
 ```
@@ -135,7 +130,7 @@ cqlsh 172.31.0.27 9042 -u cassandra -p cassandra
 - The command connects to a ScyllaDB instance at <private_IP> on port 9042 using the cqlsh tool, with the username and password set to cassandra.
 - Connects to the ScyllaDB server using CQLSH, allowing you to execute queries, manage keyspaces, and interact with the database.
 
-### 9. Create Superuser & Keyspace
+### 8. Create Superuser & Keyspace
 ```bash
 CREATE USER scylladb WITH PASSWORD 'password' SUPERUSER;
 CREATE KEYSPACE employee_db WITH REPLICATION = { 'class': 'SimpleStrategy', 'replication_factor': 1 };
@@ -164,7 +159,7 @@ GRANT SELECT, MODIFY ON KEYSPACE employee_db TO scylladb;
 
 
 
-### 10. Update Configuration File
+### 9. Update Configuration File
 
 ```bash
   172.31.0.27:8080/---> config.yaml
@@ -174,7 +169,7 @@ GRANT SELECT, MODIFY ON KEYSPACE employee_db TO scylladb;
 
 ## Redis Setup
 
-### 11. Install Redis
+### 10. Install Redis
 [Refer to the Redis Installation Guide](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/blob/Mohit-SCRUM-12/Common/Software/Redis/Installation/README.md).
 ```bash
 redis-server --version
@@ -182,7 +177,7 @@ redis-server --version
 - Redis version is 7.0.15.
 
 
-### 12. Update Redis Configuration
+### 11. Update Redis Configuration
 
 - [Kindly follow the link below for this](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/tree/Mohit-SCRUM-12/Common/Software/Redis/Configuration).
 
@@ -200,46 +195,46 @@ ACL SETUSER scylla on >"S!cUr3P@ssw0rd#2025" ~data:* +@read +@write
 
 ## Database Migration
 
-### 13. Install Migrate Tool
+### 12. Install Migrate Tool
 [Refer to the Migration Installation Guide](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/blob/Nikita-SCRUM-8/Common/Software/Migration/Installation/README.md).
 
-### 14. Update the migration.json with ScyllaDB server private IP
+### 13. Update the migration.json with ScyllaDB server private IP
 ``` bash
 Path:-  migration.json
 ```
-### 15. Check Migration Version
+### 14. Check Migration Version
 ```bash
 migrate --version
 ```
 - Migrate version is v4.16.2.
-### 16. Run Database Migrations
+### 15. Run Database Migrations
 ```bash
 make run-migrations
 ```
 
 ## Application Setup
 
-### 17. Test the Application
+### 16. Test the Application
 ```bash
 go test $(go list ./... | grep -v docs | grep -v model | grep -v main.go) -coverprofile cover.out
 ```
 
-### 18. Configure main.go File
+### 17. Configure main.go File
 [Refer to the main.go Configuration Guide](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/tree/Anuj-SCRUM-6/Common/Software%20/Golang/Configuration)
 
-### 19. Run the Application
+### 18. Run the Application
 ```bash
 go run main.go
 ```
 
-### 20. Test via Swagger UI
+### 19. Test via Swagger UI
 ```bash
 http://<Public-IP>:8080/swagger/index.html
 ```
 
 ## Authors
 
-### 21. Contact
+### 20. Contact
 | Name | Email Address | GitHub | URL |
 |------|--------------|--------|-----|
 | Anuj Yadav | anuj.yadav@mygurukulam.co | [anuj169](https://github.com/anuj169) | https://github.com/anuj169 |
